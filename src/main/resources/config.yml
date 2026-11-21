@@ -1,0 +1,30 @@
+# DillyyStaffTags - badges in front of names above players' heads, plus tablist ordering.
+# Give a rank to someone with its permission, e.g.  /lp user Name permission set dillyytags.dev true
+
+# If the tablist ends up with staff at the BOTTOM instead of the top, set this to true.
+reverse-tab-order: false
+
+# How often (ticks) nametags are re-applied. 20 = every second.
+refresh-ticks: 20
+
+# Ranks are checked top to bottom.
+#   stack: false -> only the FIRST matching one of these is used (a dev who also has the staff node only gets the dev star)
+#   stack: true  -> always added on top of that (so staff who are also Media get both)
+#   order        -> higher = higher up in the tablist
+# Colours: &a, &c ... and &#RRGGBB hex.
+ranks:
+  dev:
+    permission: dillyytags.dev
+    prefix: "&c★ "
+    order: 100
+    stack: false
+  staff:
+    permission: dillyytags.staff
+    prefix: "&a★ "
+    order: 50
+    stack: false
+  media:
+    permission: rank.media       # same node your UltimateDonutSMP media badge already uses
+    prefix: "&d📹&#37BFF9+ "
+    order: 10
+    stack: true

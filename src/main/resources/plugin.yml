@@ -1,0 +1,18 @@
+name: DillyyStaffTags
+version: 1.0
+main: me.fix.tags.StaffTags
+api-version: "1.21"
+commands:
+  stafftags:
+    description: Reload the staff tag config
+    usage: /stafftags reload
+    permission: dillyytags.admin
+permissions:
+  dillyytags.admin:
+    default: op
+  dillyytags.dev:
+    description: Shows the red Dev star on the nametag and puts you at the top of the tablist
+    default: false
+  dillyytags.staff:
+    description: Shows the green Staff star on the nametag and puts you near the top of the tablist
+    default: false
